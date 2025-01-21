@@ -49,18 +49,103 @@
 }
 
 /* ---------------------------------Header--------------------------------- */
+/* Add to your CSS */
 .header {
     grid-area: header;
     background: white;
-    padding: 20px 40px; 
+    padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex; 
-    align-items: center; 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
 }
 
-.welcome h1 {
-    font-size: 1.4rem; 
-    color: #333; 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1; 
+    max-width: 600px; 
+}
+
+.search img {
+    width: 24px; 
+    height: 24px;
+    display: block; 
+}
+
+.search input {
+    background: #e2e8f0;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    width: 100%; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.greeting-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.hi {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    background: #1992d4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1479b3;
 }
 
 /* ---------------------------------Main content--------------------------------- */
@@ -101,8 +186,8 @@
     align-content: start;
 }
 
-.announcement-card,
-.trending-card {
+/* ---------------------------------announcement--------------------------------- */
+.announcement-card {
     background: white;
     padding: 25px; 
     border-radius: 10px;
@@ -110,4 +195,61 @@
     margin-bottom: 20px; 
 }
 
-/* Add more styles for navigation, typography, etc. */
+h2 {
+    font: bolder;
+    padding-bottom: 15px;
+}
+
+.announcement-card h3 {
+    font: bolder;
+    padding-bottom: 10px;
+}
+
+.announcement-card p {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* ------------------------- Trending Section ------------------------- */
+
+
+.trending h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.trending-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.trending-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.trending-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-handle {
+    font-weight: 600;
+}
+
+.project-name {
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.4;
+}
