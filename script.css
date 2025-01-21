@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+}
+
+/* ---------------------------------Sidebar--------------------------------- */
+.sidebar {
+    grid-area: sidebar;
+    background: #1992d4;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar > h2 {
+    text-align: center;
+    margin-bottom: 40px; 
+    font-size: 1.5rem;
+}
+
+.sidebar .nav-section ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.sidebar .nav-section li {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 12px; 
+    margin-bottom: 8px; 
+    border-radius: 8px; 
+}
+
+.sidebar .nav-section img {
+    filter: invert(1); 
+    width: 25px; 
+    height: 25px; 
+}
+
+/* ---------------------------------Header--------------------------------- */
+.header {
+    grid-area: header;
+    background: white;
+    padding: 20px 40px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; 
+    align-items: center; 
+}
+
+.welcome h1 {
+    font-size: 1.4rem; 
+    color: #333; 
+}
+
+/* ---------------------------------Main content--------------------------------- */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: #e2e8f0;
+}
+
+/* ---------------------------------Project Grid--------------------------------- */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid #f0b429;
+    min-height: 200px; 
+}
+
+.project-card h3 {
+    margin-bottom: 10px; 
+}
+
+/* ---------------------------------Right Sidebar--------------------------------- */
+.right-sidebar {
+    display: grid;
+    gap: 30px;
+    align-content: start;
+}
+
+.announcement-card,
+.trending-card {
+    background: white;
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px; 
+}
+
+/* Add more styles for navigation, typography, etc. */
